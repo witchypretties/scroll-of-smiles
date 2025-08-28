@@ -31,6 +31,31 @@ const Index = () => {
     "Longu wants to high-five you! ✋",
     "You made it this far - you're AWESOME! 🌟",
     "Longu is SO proud of you! 😊",
+    "Keep going, scroll warrior! 💪",
+    "Longu is cheering you on! 📣",
+    "You're absolutely incredible! ✨",
+    "Don't stop believing! 🌟",
+    "Longu's getting taller thanks to you! 📏",
+    "You're making magic happen! 🪄",
+    "Keep that scroll finger strong! 💪",
+    "Longu appreciates your dedication! 🙏",
+    "You're almost halfway there! 🎯",
+    "This is your moment to shine! ⭐",
+    "Longu's proud of your persistence! 🏆",
+    "You're doing the impossible! 🚀",
+    "Keep scrolling, superstar! 🌟",
+    "Longu's energy is infectious! ⚡",
+    "You're writing scrolling history! 📚",
+    "Never give up, never surrender! 🛡️",
+    "Longu's rooting for you! 📢",
+    "You're a scrolling legend in the making! 👑",
+    "Push through, you've got this! 💥",
+    "Longu's dance moves are getting better! 💃",
+    "You're breaking scroll records! 📊",
+    "Keep that momentum going! 🏃‍♂️",
+    "Longu's smile is getting bigger! 😊",
+    "You're absolutely unstoppable! 🔥",
+    "The finish line is calling your name! 🏁",
     "Final stretch! You can do this! 💯"
   ];
 
@@ -44,7 +69,22 @@ const Index = () => {
     "Longu says: 'I'm not fat, I'm just fluffy!' ☁️",
     "Congratulations! You've scrolled further than Longu can walk! 🎖️",
     "Longu's dream: To become a skyscraper! 🏢",
-    "Longu's current height: Approximately 47 motivational quotes! 📏"
+    "Longu's current height: Approximately 47 motivational quotes! 📏",
+    "Scientists baffled by human's scrolling endurance! 🔬",
+    "Longu's considering a career change to being a telephone pole! 📞",
+    "Breaking: Local penguin achieves maximum stretch! 📰",
+    "Longu wondering if he should apply for NBA! 🏀",
+    "Physics teachers hate this one simple trick! 📐",
+    "Longu's passport now lists height as 'infinite'! 📋",
+    "Emergency: Penguin shortage due to excessive stretching! 🚨",
+    "Longu's new nickname: The Elastic Penguin! 🎪",
+    "Weather report: 100% chance of stretched penguin! 🌤️",
+    "Longu's considering opening a yoga studio! 🧘‍♂️",
+    "NASA wants to study Longu's aerodynamics! 🚀",
+    "Longu's autobiography: 'From Waddle to Vertical Mile'! 📖",
+    "Breaking: Penguin discovers secret to immortal scrolling! ♾️",
+    "Longu's shopping for extra-long scarves! 🧣",
+    "Alert: Penguin has transcended normal dimensions! 🌌"
   ];
 
   return (
@@ -80,61 +120,66 @@ const Index = () => {
         <img 
           src={longuImage}
           alt="Longu the penguin stretched really long"
-          className="w-64 md:w-96 object-fill opacity-25"
-          style={{ height: '800vh', objectFit: 'fill' }}
+          className="w-64 md:w-96 object-fill"
+          style={{ height: '2000vh', objectFit: 'fill' }}
         />
       </div>
 
-      {/* Long content sections */}
-      <div className="relative z-10 bg-gradient-to-b from-penguin-cream via-penguin-light-blue to-penguin-blue">
-        {encouragingMessages.map((message, index) => (
-          <div key={`encouragement-${index}`} className="scroll-encouragement">
-            {message}
-          </div>
-        ))}
+      {/* Long content sections with side text */}
+      <div className="relative z-10">
+        {/* Left side messages */}
+        <div className="fixed left-4 top-1/2 transform -translate-y-1/2 max-w-xs z-20">
+          {encouragingMessages.slice(0, Math.ceil(encouragingMessages.length / 2)).map((message, index) => (
+            <div 
+              key={`left-encouragement-${index}`} 
+              className="mb-96 text-lg md:text-xl font-bold text-penguin-dark bg-white/80 p-4 rounded-lg shadow-lg"
+              style={{ marginTop: `${index * 200}vh` }}
+            >
+              {message}
+            </div>
+          ))}
+        </div>
 
-        {funnyMessages.map((message, index) => (
-          <div key={`funny-${index}`} className="penguin-message">
-            {message}
-          </div>
-        ))}
+        {/* Right side messages */}
+        <div className="fixed right-4 top-1/2 transform -translate-y-1/2 max-w-xs z-20">
+          {encouragingMessages.slice(Math.ceil(encouragingMessages.length / 2)).map((message, index) => (
+            <div 
+              key={`right-encouragement-${index}`} 
+              className="mb-96 text-lg md:text-xl font-bold text-penguin-dark bg-white/80 p-4 rounded-lg shadow-lg"
+              style={{ marginTop: `${(index + Math.ceil(encouragingMessages.length / 2)) * 180}vh` }}
+            >
+              {message}
+            </div>
+          ))}
+        </div>
 
-        {/* Extra motivational sections */}
-        <section className="py-32 text-center">
-          <h2 className="text-4xl md:text-6xl font-black text-white mb-8">
-            You're INCREDIBLE! 🌟
-          </h2>
-          <p className="text-2xl text-penguin-cream font-bold max-w-2xl mx-auto px-4">
-            Look how far you've scrolled! Longu is getting SOOO much longer and you're getting stronger! 💪
-          </p>
-        </section>
+        {/* Alternating funny messages */}
+        <div className="fixed left-8 top-1/4 max-w-sm z-20">
+          {funnyMessages.slice(0, Math.ceil(funnyMessages.length / 2)).map((message, index) => (
+            <div 
+              key={`left-funny-${index}`} 
+              className="mb-96 text-base md:text-lg font-semibold text-penguin-blue bg-penguin-cream/90 p-3 rounded-lg shadow-md"
+              style={{ marginTop: `${index * 160}vh` }}
+            >
+              {message}
+            </div>
+          ))}
+        </div>
 
-        <section className="py-32 text-center">
-          <h2 className="text-4xl md:text-6xl font-black text-white mb-8">
-            KEEP GOING! 🚀
-          </h2>
-          <p className="text-2xl text-penguin-cream font-bold max-w-2xl mx-auto px-4">
-            Longu's adorable orange feet are getting closer! You're almost there, champion! 🏆
-          </p>
-        </section>
+        <div className="fixed right-8 top-1/4 max-w-sm z-20">
+          {funnyMessages.slice(Math.ceil(funnyMessages.length / 2)).map((message, index) => (
+            <div 
+              key={`right-funny-${index}`} 
+              className="mb-96 text-base md:text-lg font-semibold text-penguin-blue bg-penguin-cream/90 p-3 rounded-lg shadow-md"
+              style={{ marginTop: `${(index + Math.ceil(funnyMessages.length / 2)) * 140}vh` }}
+            >
+              {message}
+            </div>
+          ))}
+        </div>
 
-        <section className="py-32 text-center">
-          <h2 className="text-4xl md:text-6xl font-black text-white mb-8">
-            SO CLOSE! 🎉
-          </h2>
-          <p className="text-2xl text-penguin-cream font-bold max-w-2xl mx-auto px-4">
-            Longu can feel your determination! You're absolutely amazing! ✨
-          </p>
-        </section>
-
-        <section className="py-32 text-center">
-          <h2 className="text-4xl md:text-6xl font-black text-white mb-8">
-            FINAL STRETCH! 💯
-          </h2>
-          <p className="text-2xl text-penguin-cream font-bold max-w-2xl mx-auto px-4">
-            You're about to reach Longu's adorable orange feet! 🧡
-          </p>
-        </section>
+        {/* Spacer to create the scroll length */}
+        <div style={{ height: '2000vh' }}></div>
 
         {/* Final celebration section */}
         <section className="py-32 text-center bg-gradient-to-b from-penguin-blue to-penguin-orange">
