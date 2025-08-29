@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowDown, Twitter } from 'lucide-react';
-// Using the pre-stretched Longu penguin image
-const longuImage = '/lovable-uploads/24c8815c-31db-4478-bd2b-fbf2044649cf.png';
+// Using the new ultra-stretched Longu penguin image (9000x18000px)
+const longuImage = '/lovable-uploads/8aa70f37-3a62-4147-b33e-dfecb0b4432d.png';
 
 const Index = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -175,19 +175,18 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Stretched Longu background - optimized for better appearance */}
+      {/* Stretched Longu background - using the new ultra-stretched 18000px tall image */}
       <div className="absolute left-1/2 top-0 transform -translate-x-1/2 pointer-events-none" style={{ zIndex: 1 }}>
         <img 
           src={longuImage}
           alt="Longu the penguin stretched really long"
           className="w-48 md:w-64"
           style={{ 
-            height: '2500vh', 
-            objectFit: 'contain',
-            imageRendering: 'crisp-edges'
+            height: '8000vh', 
+            objectFit: 'fill'
           }}
-          onLoad={() => console.log('NEW Longu image loaded successfully')}
-          onError={() => console.log('NEW Longu image failed to load')}
+          onLoad={() => console.log('Ultra-stretched Longu image loaded successfully')}
+          onError={() => console.log('Ultra-stretched Longu image failed to load')}
         />
       </div>
 
@@ -240,8 +239,8 @@ const Index = () => {
           ))}
         </div>
 
-        {/* Spacer to create the scroll length - reduced for better image quality */}
-        <div style={{ height: '2500vh' }}></div>
+        {/* Spacer to create the ultra-long scroll length for the 18000px image */}
+        <div style={{ height: '8000vh' }}></div>
 
         {/* Final celebration section */}
         <section className="py-32 text-center bg-gradient-to-b from-penguin-blue to-penguin-orange">
