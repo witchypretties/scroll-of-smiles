@@ -1,19 +1,8 @@
 import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowDown, Twitter } from 'lucide-react';
-// Using the split Longu penguin images for smoother stretching
-const longuImages = [
-  '/lovable-uploads/0212155e-8b31-4842-a8cb-cc62907cb993.png', // 1
-  '/lovable-uploads/e7f8b467-f4a6-4869-8d79-694d0f2d98ee.png', // 2
-  '/lovable-uploads/2474d7c6-297b-4bd5-bc63-024a696d9282.png', // 3
-  '/lovable-uploads/a7a89df2-474b-44f7-8337-ac2cddfbe9af.png', // 4
-  '/lovable-uploads/b21c38d0-b76d-4492-adab-203a6043125a.png', // 5
-  '/lovable-uploads/1d1440ec-9861-40dc-8215-9965d54867de.png', // 6
-  '/lovable-uploads/c2bef53b-d25e-449c-868d-dd39d03ebf20.png', // 7
-  '/lovable-uploads/3d3cfd32-4f92-41b0-9395-d87af1098ddd.png', // 8
-  '/lovable-uploads/b0b4b449-2945-4a12-9f31-2c6884011b94.png', // 9
-  '/lovable-uploads/d3ddb5e6-3946-4ade-bd0c-e13dc5ad3e86.png'  // 10
-];
+// Using the pre-stretched Longu penguin image
+const longuImage = '/lovable-uploads/90c8bbae-5d67-4cee-9761-c63157bf1d24.png';
 
 const Index = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -186,27 +175,17 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Stretched Longu background - 10 pieces positioned in sequence */}
+      {/* Stretched Longu background - single pre-stretched image */}
       <div className="fixed left-1/2 top-0 transform -translate-x-1/2 pointer-events-none z-0">
-        {longuImages.map((imageSrc, index) => {
-          console.log(`Loading Longu image ${index + 1}:`, imageSrc);
-          return (
-            <img 
-              key={index}
-              src={imageSrc}
-              alt={`Longu the penguin part ${index + 1}`}
-              className="w-64 md:w-96"
-              style={{ 
-                height: '400vh', 
-                objectFit: 'fill',
-                display: 'block',
-                marginTop: index === 0 ? '0' : '0'
-              }}
-              onLoad={() => console.log(`Longu image ${index + 1} loaded successfully`)}
-              onError={() => console.log(`Longu image ${index + 1} failed to load`)}
-            />
-          );
-        })}
+        <img 
+          src={longuImage}
+          alt="Longu the penguin stretched really long"
+          className="w-64 md:w-96"
+          style={{ 
+            height: '4000vh', 
+            objectFit: 'fill'
+          }}
+        />
       </div>
 
       {/* Long content sections with side text */}
