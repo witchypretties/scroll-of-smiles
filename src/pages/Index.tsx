@@ -180,10 +180,10 @@ const Index = () => {
         <img 
           src={longuImage}
           alt="Longu the penguin stretched really long"
-          className="w-48 md:w-64"
+          className="w-auto mx-auto"
           style={{ 
-            height: '3500vh', 
-            objectFit: 'fill'
+            height: '3500vh',      // keeps the long scroll
+            objectFit: 'contain'   // prevents distortion, keeps proportions
           }}
           onLoad={() => console.log('Ultra-stretched Longu image loaded successfully')}
           onError={() => console.log('Ultra-stretched Longu image failed to load')}
