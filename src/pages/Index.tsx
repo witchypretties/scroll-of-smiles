@@ -176,7 +176,7 @@ const Index = () => {
       </section>
 
       {/* Stretched Longu background - single pre-stretched image */}
-      <div className="fixed left-1/2 top-0 transform -translate-x-1/2 pointer-events-none z-0">
+      <div className="fixed left-1/2 top-0 transform -translate-x-1/2 pointer-events-none z-10">
         <img 
           src={longuImage}
           alt="Longu the penguin stretched really long"
@@ -185,11 +185,13 @@ const Index = () => {
             height: '4000vh', 
             objectFit: 'fill'
           }}
+          onLoad={() => console.log('Longu image loaded successfully')}
+          onError={() => console.log('Longu image failed to load')}
         />
       </div>
 
       {/* Long content sections with side text */}
-      <div className="relative z-10">
+      <div className="relative z-20">
         {/* Messages scattered throughout the scroll */}
         <div className="absolute inset-0">
           {/* Left side encouraging messages - spread across full height */}
