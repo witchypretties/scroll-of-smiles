@@ -177,7 +177,7 @@ const Index = () => {
 
       {/* Stretched Longu background - single pre-stretched image */}
       <img 
-        src="https://i.ibb.co/cWc0Bsn/longguu-1.png"
+        src="/lovable-uploads/90c8bbae-5d67-4cee-9761-c63157bf1d24.png"
         alt="Longu the penguin stretched really long"
         className="fixed left-1/2 top-0 transform -translate-x-1/2 w-64 md:w-96 pointer-events-none"
         style={{ 
