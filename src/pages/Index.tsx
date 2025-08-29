@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowDown, Twitter } from 'lucide-react';
 // Using the original Longu penguin image
-const longuImage = '/lovable-uploads/f75857e5-7eba-47d0-b0a0-c2e831acaf64.png';
+const longuImage = '/longu.png';
 
 const Index = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -187,51 +187,47 @@ const Index = () => {
 
       {/* Long content sections with side text */}
       <div className="relative z-10">
-        {/* Left side messages */}
-        <div className="fixed left-4 top-1/2 transform -translate-y-1/2 max-w-xs z-20">
+        {/* Messages scattered throughout the scroll */}
+        <div className="absolute inset-0">
+          {/* Left side encouraging messages */}
           {encouragingMessages.slice(0, Math.ceil(encouragingMessages.length / 2)).map((message, index) => (
             <div 
               key={`left-encouragement-${index}`} 
-              className="mb-96 text-lg md:text-xl font-bold text-penguin-dark bg-white/80 p-4 rounded-lg shadow-lg"
-              style={{ marginTop: `${index * 200}vh` }}
+              className="absolute left-4 max-w-xs text-lg md:text-xl font-bold text-penguin-dark bg-white/80 p-4 rounded-lg shadow-lg"
+              style={{ top: `${100 + index * 600}px` }}
             >
               {message}
             </div>
           ))}
-        </div>
-
-        {/* Right side messages */}
-        <div className="fixed right-4 top-1/2 transform -translate-y-1/2 max-w-xs z-20">
+          
+          {/* Right side encouraging messages */}
           {encouragingMessages.slice(Math.ceil(encouragingMessages.length / 2)).map((message, index) => (
             <div 
               key={`right-encouragement-${index}`} 
-              className="mb-96 text-lg md:text-xl font-bold text-penguin-dark bg-white/80 p-4 rounded-lg shadow-lg"
-              style={{ marginTop: `${(index + Math.ceil(encouragingMessages.length / 2)) * 180}vh` }}
+              className="absolute right-4 max-w-xs text-lg md:text-xl font-bold text-penguin-dark bg-white/80 p-4 rounded-lg shadow-lg"
+              style={{ top: `${400 + index * 600}px` }}
             >
               {message}
             </div>
           ))}
-        </div>
-
-        {/* Alternating funny messages */}
-        <div className="fixed left-8 top-1/4 max-w-sm z-20">
+          
+          {/* Left side funny messages */}
           {funnyMessages.slice(0, Math.ceil(funnyMessages.length / 2)).map((message, index) => (
             <div 
               key={`left-funny-${index}`} 
-              className="mb-96 text-base md:text-lg font-semibold text-penguin-blue bg-penguin-cream/90 p-3 rounded-lg shadow-md"
-              style={{ marginTop: `${index * 160}vh` }}
+              className="absolute left-8 max-w-sm text-base md:text-lg font-semibold text-penguin-blue bg-penguin-cream/90 p-3 rounded-lg shadow-md"
+              style={{ top: `${300 + index * 500}px` }}
             >
               {message}
             </div>
           ))}
-        </div>
-
-        <div className="fixed right-8 top-1/4 max-w-sm z-20">
+          
+          {/* Right side funny messages */}
           {funnyMessages.slice(Math.ceil(funnyMessages.length / 2)).map((message, index) => (
             <div 
               key={`right-funny-${index}`} 
-              className="mb-96 text-base md:text-lg font-semibold text-penguin-blue bg-penguin-cream/90 p-3 rounded-lg shadow-md"
-              style={{ marginTop: `${(index + Math.ceil(funnyMessages.length / 2)) * 140}vh` }}
+              className="absolute right-8 max-w-sm text-base md:text-lg font-semibold text-penguin-blue bg-penguin-cream/90 p-3 rounded-lg shadow-md"
+              style={{ top: `${200 + index * 500}px` }}
             >
               {message}
             </div>
