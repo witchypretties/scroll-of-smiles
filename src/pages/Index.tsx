@@ -20,34 +20,48 @@ const Index = () => {
   const encouragingMessages = [
     "You're doing great! Keep going! 🐧",
     "Longu believes in you! 🎉",
-    "You're unstoppable! ⭐",
-    "This is incredible! 🚀",
+    "You're unstoppable! Don't give up now! ⭐",
+    "This is incredible! You're so close! 🚀",
     "You're a scrolling champion! 🏆",
-    "You made it this far - AWESOME! 🌟",
+    "You made it this far - you're AWESOME! 🌟",
     "Keep going, scroll warrior! 💪",
     "You're making magic happen! 🪄",
-    "Never give up! 🛡️",
+    "You're doing the impossible! 🚀",
+    "Never give up, never surrender! 🛡️",
+    "You're breaking scroll records! 📊",
+    "Wow! You're 25% through Longu! 🌟",
+    "You're in the middle zone! 🎯",
     "You're 50% there, amazing! 🎉",
-    "Almost there! 🏁",
-    "Final push! You've got this! 💪"
+    "You're 75% through! Almost there! 🏁",
+    "Final push! You've got this! 💪",
+    "One more scroll to victory! 🎉"
   ];
 
   const funnyMessages = [
-    "Plot twist: Longu is 50 feet tall! 📏",
+    "Plot twist: Longu is actually 50 feet tall! 📏",
     "Fun fact: Longu can't fly, but you can scroll! 🛫",
-    "Achievement unlocked: Longu Stretcher! 🎮",
-    "Longu says: 'I'm not fat, I'm fluffy!' ☁️",
+    "Achievement unlocked: Professional Longu Stretcher! 🎮",
+    "Longu says: 'I'm not fat, I'm just fluffy!' ☁️",
     "Longu's dream: To become a skyscraper! 🏢",
-    "Breaking: Penguin achieves maximum stretch! 📰",
+    "Breaking: Local penguin achieves maximum stretch! 📰",
     "Longu wondering if he should apply for NBA! 🏀",
-    "Longu's nickname: The Elastic Penguin! 🎪",
-    "Breaking: Penguin discovers scrolling! ♾️",
-    "Longu's secret: Daily stretching yoga! 🧘‍♂️",
+    "Longu's new nickname: The Elastic Penguin! 🎪",
+    "Longu's considering opening a yoga studio! 🧘‍♂️",
+    "Breaking: Penguin discovers secret to immortal scrolling! ♾️",
+    "Fun fact: Real penguins can hold their breath for 20 minutes! 🤿",
+    "Longu's secret: He practices stretching yoga daily! 🧘‍♂️",
     "Longu's motto: 'Go long or go home!' 🏡",
+    "Longu's dream job: Professional limousine penguin! 🚗",
+    "Fun fact: Penguins slide on their bellies called 'tobogganing'! 🛷",
+    "Longu's superpower: Infinite vertical expansion! ⬆️",
+    "Breaking: Penguin develops new form of transportation! 🚀",
     "Longu's backup career: Giraffe impersonator! 🦒",
-    "Longu's favorite game: Reverse limbo! 🤸‍♂️",
-    "Longu's superpower: Vertical expansion! ⬆️",
-    "Final fact: You're amazing! 🌟"
+    "Longu's favorite game: Limbo... but in reverse! 🤸‍♂️",
+    "Longu's life philosophy: 'The longer, the better!' 📏",
+    "Breaking: Penguin discovered to have elastic properties! 🎪",
+    "Longu's dream vacation: A really tall building! 🏢",
+    "Longu's goal: To touch the clouds someday! ☁️",
+    "Final fact: You're amazing for scrolling this far! 🌟"
   ];
 
   return (
@@ -79,16 +93,15 @@ const Index = () => {
       </section>
 
       {/* Cropped Longu image */}
-      <div className="absolute left-1/2 pointer-events-none" style={{ top: '1000px', zIndex: 1, transform: 'translateX(-50%)' }}>
+      <div className="absolute left-1/2 pointer-events-none" style={{ top: '800px', zIndex: 1, transform: 'translateX(-50%)' }}>
         <img 
           src="/lovable-uploads/53a3f6c7-e56f-4eb8-869c-b5a06fd15b7e.png"
           alt="Longu the penguin stretched really tall"
           className="w-auto mx-auto"
           style={{ 
-            height: '10000px',
+            height: '12000px',
             width: '1024px',
-            objectFit: 'cover',
-            objectPosition: 'bottom'
+            objectFit: 'contain'
           }}
         />
       </div>
@@ -143,7 +156,7 @@ const Index = () => {
         </div>
 
         {/* Spacer to create the perfect scroll length matching the cropped image */}
-        <div style={{ height: '8000px' }}></div>
+        <div style={{ height: '10000px' }}></div>
 
         {/* Final celebration section */}
         <section className="py-16 text-center bg-gradient-to-b from-penguin-blue to-penguin-orange">
