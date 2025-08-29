@@ -175,14 +175,15 @@ const Index = () => {
         </div>
       </section>
 
-      {/* New tall Longu image */}
+      {/* New tall Longu image - 1024x15360px */}
       <div className="absolute left-1/2 top-0 transform -translate-x-1/2 pointer-events-none" style={{ zIndex: 1 }}>
         <img 
           src="/lovable-uploads/53a3f6c7-e56f-4eb8-869c-b5a06fd15b7e.png"
           alt="Longu the penguin stretched really tall"
           className="w-auto mx-auto"
           style={{ 
-            height: '3500vh',
+            height: '15360px',
+            width: '1024px',
             objectFit: 'contain'
           }}
         />
@@ -192,45 +193,45 @@ const Index = () => {
       <div className="relative z-20">
         {/* Messages scattered throughout the scroll */}
         <div className="absolute inset-0">
-          {/* Left side encouraging messages - spread across full height */}
+          {/* Left side encouraging messages - distributed across 15360px height */}
           {encouragingMessages.slice(0, Math.ceil(encouragingMessages.length / 2)).map((message, index) => (
             <div 
               key={`left-encouragement-${index}`} 
               className="absolute left-4 max-w-xs text-lg md:text-xl font-bold text-penguin-dark bg-white/80 p-4 rounded-lg shadow-lg"
-              style={{ top: `${1000 + index * 1200}px` }}
+              style={{ top: `${1500 + index * 350}px` }}
             >
               {message}
             </div>
           ))}
           
-          {/* Right side encouraging messages - spread across full height */}
+          {/* Right side encouraging messages - distributed across 15360px height */}
           {encouragingMessages.slice(Math.ceil(encouragingMessages.length / 2)).map((message, index) => (
             <div 
               key={`right-encouragement-${index}`} 
               className="absolute right-4 max-w-xs text-lg md:text-xl font-bold text-penguin-dark bg-white/80 p-4 rounded-lg shadow-lg"
-              style={{ top: `${1400 + index * 1200}px` }}
+              style={{ top: `${1800 + index * 350}px` }}
             >
               {message}
             </div>
           ))}
           
-          {/* Left side funny messages - spread across full height */}
+          {/* Left side funny messages - distributed across 15360px height */}
           {funnyMessages.slice(0, Math.ceil(funnyMessages.length / 2)).map((message, index) => (
             <div 
               key={`left-funny-${index}`} 
               className="absolute left-8 max-w-sm text-base md:text-lg font-semibold text-penguin-blue bg-penguin-cream/90 p-3 rounded-lg shadow-md"
-              style={{ top: `${800 + index * 1000}px` }}
+              style={{ top: `${1200 + index * 230}px` }}
             >
               {message}
             </div>
           ))}
           
-          {/* Right side funny messages - spread across full height */}
+          {/* Right side funny messages - distributed across 15360px height */}
           {funnyMessages.slice(Math.ceil(funnyMessages.length / 2)).map((message, index) => (
             <div 
               key={`right-funny-${index}`} 
               className="absolute right-8 max-w-sm text-base md:text-lg font-semibold text-penguin-blue bg-penguin-cream/90 p-3 rounded-lg shadow-md"
-              style={{ top: `${600 + index * 1000}px` }}
+              style={{ top: `${900 + index * 230}px` }}
             >
               {message}
             </div>
@@ -238,7 +239,7 @@ const Index = () => {
         </div>
 
         {/* Spacer to create the perfect scroll length matching the image */}
-        <div style={{ height: '3500vh' }}></div>
+        <div style={{ height: '15360px' }}></div>
 
         {/* Final celebration section */}
         <section className="py-32 text-center bg-gradient-to-b from-penguin-blue to-penguin-orange">
