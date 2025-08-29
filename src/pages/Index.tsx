@@ -175,15 +175,16 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Stretched Longu background - single pre-stretched image */}
+      {/* Stretched Longu background - optimized for better appearance */}
       <div className="absolute left-1/2 top-0 transform -translate-x-1/2 pointer-events-none" style={{ zIndex: 1 }}>
         <img 
           src={longuImage}
           alt="Longu the penguin stretched really long"
-          className="w-64 md:w-96"
+          className="w-48 md:w-64"
           style={{ 
-            height: '4000vh', 
-            objectFit: 'fill'
+            height: '2500vh', 
+            objectFit: 'contain',
+            imageRendering: 'crisp-edges'
           }}
           onLoad={() => console.log('NEW Longu image loaded successfully')}
           onError={() => console.log('NEW Longu image failed to load')}
@@ -239,8 +240,8 @@ const Index = () => {
           ))}
         </div>
 
-        {/* Spacer to create the scroll length */}
-        <div style={{ height: '4000vh' }}></div>
+        {/* Spacer to create the scroll length - reduced for better image quality */}
+        <div style={{ height: '2500vh' }}></div>
 
         {/* Final celebration section */}
         <section className="py-32 text-center bg-gradient-to-b from-penguin-blue to-penguin-orange">
