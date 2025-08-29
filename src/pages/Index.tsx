@@ -1,8 +1,19 @@
 import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowDown, Twitter } from 'lucide-react';
-// Using the original Longu penguin image
-const longuImage = '/longu-official.png';
+// Using the split Longu penguin images for smoother stretching
+const longuImages = [
+  '/lovable-uploads/43ef8050-90dd-47fd-9041-8b2e8f5c1807.png', // Head
+  '/lovable-uploads/5123b65f-de8d-4757-9b35-d5b179909c91.png', // Neck 1
+  '/lovable-uploads/2b63bc9b-4e76-49ed-b852-d0cd63b4eea8.png', // Chest
+  '/lovable-uploads/5241c3f8-8a88-4933-8d89-1dc2b198ee92.png', // Feet
+  '/lovable-uploads/3f898a0d-c7ce-41a5-a2f3-d4c1bb510ce6.png', // Body 1
+  '/lovable-uploads/a03cc40a-66ed-49a9-9d66-eea32d3ea2cf.png', // Body 2
+  '/lovable-uploads/94cce4ee-2bd6-4c64-b551-6243c7a8c122.png', // Body 3
+  '/lovable-uploads/9772bcb2-e15d-4a50-8d52-b27b4008679a.png', // Body 4
+  '/lovable-uploads/c48c54bf-7deb-4fc3-8fe8-2a7dc198e239.png', // Body 5
+  '/lovable-uploads/583950a0-9993-40d0-9943-32c5d8add9e8.png'  // Body 6
+];
 
 const Index = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -175,14 +186,17 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Stretched Longu background */}
+      {/* Stretched Longu background - 10 pieces stacked vertically */}
       <div className="fixed left-1/2 top-0 transform -translate-x-1/2 pointer-events-none z-0">
-        <img 
-          src={longuImage}
-          alt="Longu the penguin stretched really long"
-          className="w-64 md:w-96"
-          style={{ height: '4000vh', objectFit: 'fill' }}
-        />
+        {longuImages.map((imageSrc, index) => (
+          <img 
+            key={index}
+            src={imageSrc}
+            alt={`Longu the penguin part ${index + 1}`}
+            className="w-64 md:w-96 block"
+            style={{ height: '400vh', objectFit: 'fill' }}
+          />
+        ))}
       </div>
 
       {/* Long content sections with side text */}
