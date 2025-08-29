@@ -45,36 +45,12 @@ All colors MUST be HSL.
     --penguin-orange: 25 100% 65%;
     --penguin-dark: 220 20% 15%;
 
-    /* Crazy colorful additions */
-    --neon-pink: 320 100% 70%;
-    --electric-purple: 280 100% 70%;
-    --lime-green: 90 100% 60%;
-    --hot-orange: 15 100% 55%;
-    --cyan-blue: 180 100% 50%;
-    --rainbow-red: 0 100% 60%;
-    --sunshine-yellow: 50 100% 65%;
-
     /* Gradients */
     --gradient-sky: linear-gradient(180deg, hsl(200 100% 90%), hsl(210 90% 85%));
     --gradient-cheerful: linear-gradient(135deg, hsl(210 90% 65%), hsl(25 100% 65%));
-    --gradient-rainbow: linear-gradient(45deg, 
-      hsl(0 100% 60%), 
-      hsl(50 100% 65%), 
-      hsl(90 100% 60%), 
-      hsl(180 100% 50%), 
-      hsl(280 100% 70%), 
-      hsl(320 100% 70%));
-    --gradient-crazy: linear-gradient(135deg, 
-      hsl(320 100% 70%) 0%, 
-      hsl(280 100% 70%) 20%, 
-      hsl(180 100% 50%) 40%, 
-      hsl(90 100% 60%) 60%, 
-      hsl(50 100% 65%) 80%, 
-      hsl(15 100% 55%) 100%);
 
     /* Animations */
     --bounce-gentle: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    --pulse-crazy: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
     --radius: 1rem;
 
@@ -181,53 +157,5 @@ All colors MUST be HSL.
     50% {
       transform: translateY(-20px);
     }
-  }
-
-  /* Crazy colorful animations */
-  .rainbow-pulse {
-    animation: rainbowPulse 2s infinite;
-  }
-
-  @keyframes rainbowPulse {
-    0% { background: hsl(var(--neon-pink)); }
-    16.66% { background: hsl(var(--electric-purple)); }
-    33.33% { background: hsl(var(--cyan-blue)); }
-    50% { background: hsl(var(--lime-green)); }
-    66.66% { background: hsl(var(--sunshine-yellow)); }
-    83.33% { background: hsl(var(--hot-orange)); }
-    100% { background: hsl(var(--rainbow-red)); }
-  }
-
-  .spin-crazy {
-    animation: spinCrazy 4s linear infinite;
-  }
-
-  @keyframes spinCrazy {
-    0% { transform: rotate(0deg) scale(1); }
-    25% { transform: rotate(90deg) scale(1.1); }
-    50% { transform: rotate(180deg) scale(0.9); }
-    75% { transform: rotate(270deg) scale(1.2); }
-    100% { transform: rotate(360deg) scale(1); }
-  }
-
-  .wiggle {
-    animation: wiggle 0.5s ease-in-out infinite alternate;
-  }
-
-  @keyframes wiggle {
-    0% { transform: rotate(-3deg); }
-    100% { transform: rotate(3deg); }
-  }
-
-  .gradient-bg-crazy {
-    background: var(--gradient-crazy);
-    background-size: 400% 400%;
-    animation: gradientShift 3s ease infinite;
-  }
-
-  @keyframes gradientShift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
   }
 }
