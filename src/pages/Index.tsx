@@ -175,18 +175,37 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Stretched Longu background - perfectly fitted with minimal white space */}
-      <div className="absolute left-1/2 top-0 transform -translate-x-1/2 pointer-events-none" style={{ zIndex: 1 }}>
-        <img 
-          src={longuImage}
-          alt="Longu the penguin stretched really long"
-          className="w-auto mx-auto"
-          style={{ 
-            height: '3500vh',      // keeps the long scroll
-            objectFit: 'contain'   // prevents distortion, keeps proportions
-          }}
-          onLoad={() => console.log('Ultra-stretched Longu image loaded successfully')}
-          onError={() => console.log('Ultra-stretched Longu image failed to load')}
+      {/* Longu column built from head + repeatable body + feet (no warping) */}
+      <div
+        className="absolute left-1/2 top-0 -translate-x-1/2 pointer-events-none"
+        style={{
+          zIndex: 1,
+          height: '3500vh',                 // control total scroll length here
+          width: '16rem',                   // w-64 ≈ 16rem (Tailwind)
+          backgroundImage: 'url(/lovable-uploads/9cacbb67-667b-4009-b9c0-b8b2e7db561c.png)',
+          backgroundRepeat: 'repeat-y',     // tile the body infinitely
+          backgroundPosition: 'top center',
+          backgroundSize: '100% auto'       // keeps aspect ratio, matches the column width
+        }}
+      >
+        {/* Head at the very top */}
+        <img
+          src="/lovable-uploads/9863101b-bfba-47c2-b6af-6fae5c4c45f6.png"
+          alt="Longu head"
+          className="block w-full h-auto select-none"
+          loading="eager"
+          decoding="async"
+          style={{ position: 'absolute', top: 0, left: 0 }}
+        />
+
+        {/* Feet at the very bottom */}
+        <img
+          src="/lovable-uploads/a5effc0e-2616-4e06-9ba2-fe9056c34c61.png"
+          alt="Longu feet"
+          className="block w-full h-auto select-none"
+          loading="lazy"
+          decoding="async"
+          style={{ position: 'absolute', bottom: 0, left: 0 }}
         />
       </div>
 
