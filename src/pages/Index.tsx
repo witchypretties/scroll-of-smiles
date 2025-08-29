@@ -176,19 +176,18 @@ const Index = () => {
       </section>
 
       {/* Stretched Longu background - single pre-stretched image */}
-      <div className="fixed left-1/2 top-0 transform -translate-x-1/2 pointer-events-none z-10">
-        <img 
-          src={longuImage}
-          alt="Longu the penguin stretched really long"
-          className="w-64 md:w-96"
-          style={{ 
-            height: '4000vh', 
-            objectFit: 'fill'
-          }}
-          onLoad={() => console.log('Longu image loaded successfully')}
-          onError={() => console.log('Longu image failed to load')}
-        />
-      </div>
+      <img 
+        src="/longu-stretched.png"
+        alt="Longu the penguin stretched really long"
+        className="fixed left-1/2 top-0 transform -translate-x-1/2 w-64 md:w-96 pointer-events-none"
+        style={{ 
+          height: '4000vh', 
+          objectFit: 'fill',
+          zIndex: 1
+        }}
+        onLoad={() => console.log('Longu image loaded successfully')}
+        onError={(e) => console.log('Longu image failed to load:', e)}
+      />
 
       {/* Long content sections with side text */}
       <div className="relative z-20">
