@@ -92,17 +92,16 @@ const Index = () => {
         </div>
       </section>
 
-      {/* New tall Longu image - cropped top and bottom */}
-      <div className="absolute left-1/2 transform -translate-x-1/2 pointer-events-none" style={{ zIndex: 1, top: '600px' }}>
+      {/* New tall Longu image - 1024x15360px */}
+      <div className="absolute left-1/2 top-0 transform -translate-x-1/2 pointer-events-none" style={{ zIndex: 1 }}>
         <img 
           src="/lovable-uploads/53a3f6c7-e56f-4eb8-869c-b5a06fd15b7e.png"
           alt="Longu the penguin stretched really tall"
           className="w-auto mx-auto"
           style={{ 
-            height: '10000px',
+            height: '15360px',
             width: '1024px',
-            objectFit: 'cover',
-            objectPosition: 'center'
+            objectFit: 'contain'
           }}
         />
       </div>
@@ -157,7 +156,7 @@ const Index = () => {
         </div>
 
         {/* Spacer to create the perfect scroll length matching the image */}
-        <div style={{ height: '9000px' }}></div>
+        <div style={{ height: '12000px' }}></div>
 
         {/* Final celebration section */}
         <section className="py-16 text-center bg-gradient-to-b from-penguin-blue to-penguin-orange">
