@@ -3,16 +3,16 @@ import { Button } from '@/components/ui/button';
 import { ArrowDown, Twitter } from 'lucide-react';
 // Using the split Longu penguin images for smoother stretching
 const longuImages = [
-  '/lovable-uploads/43ef8050-90dd-47fd-9041-8b2e8f5c1807.png', // Head
-  '/lovable-uploads/5123b65f-de8d-4757-9b35-d5b179909c91.png', // Neck 1
-  '/lovable-uploads/2b63bc9b-4e76-49ed-b852-d0cd63b4eea8.png', // Chest
-  '/lovable-uploads/5241c3f8-8a88-4933-8d89-1dc2b198ee92.png', // Feet
-  '/lovable-uploads/3f898a0d-c7ce-41a5-a2f3-d4c1bb510ce6.png', // Body 1
-  '/lovable-uploads/a03cc40a-66ed-49a9-9d66-eea32d3ea2cf.png', // Body 2
-  '/lovable-uploads/94cce4ee-2bd6-4c64-b551-6243c7a8c122.png', // Body 3
-  '/lovable-uploads/9772bcb2-e15d-4a50-8d52-b27b4008679a.png', // Body 4
-  '/lovable-uploads/c48c54bf-7deb-4fc3-8fe8-2a7dc198e239.png', // Body 5
-  '/lovable-uploads/583950a0-9993-40d0-9943-32c5d8add9e8.png'  // Body 6
+  '/lovable-uploads/0212155e-8b31-4842-a8cb-cc62907cb993.png', // 1
+  '/lovable-uploads/e7f8b467-f4a6-4869-8d79-694d0f2d98ee.png', // 2
+  '/lovable-uploads/2474d7c6-297b-4bd5-bc63-024a696d9282.png', // 3
+  '/lovable-uploads/a7a89df2-474b-44f7-8337-ac2cddfbe9af.png', // 4
+  '/lovable-uploads/b21c38d0-b76d-4492-adab-203a6043125a.png', // 5
+  '/lovable-uploads/1d1440ec-9861-40dc-8215-9965d54867de.png', // 6
+  '/lovable-uploads/c2bef53b-d25e-449c-868d-dd39d03ebf20.png', // 7
+  '/lovable-uploads/3d3cfd32-4f92-41b0-9395-d87af1098ddd.png', // 8
+  '/lovable-uploads/b0b4b449-2945-4a12-9f31-2c6884011b94.png', // 9
+  '/lovable-uploads/d3ddb5e6-3946-4ade-bd0c-e13dc5ad3e86.png'  // 10
 ];
 
 const Index = () => {
