@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowDown, Twitter } from 'lucide-react';
 // Using the original Longu penguin image
-const longuImage = '/lovable-uploads/c17bbead-b400-49e4-9340-2cdb4fa35aef.png';
+const longuImage = '/lovable-uploads/f75857e5-7eba-47d0-b0a0-c2e831acaf64.png';
 
 const Index = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -39,7 +39,7 @@ const Index = () => {
     "You're making magic happen! 🪄",
     "Keep that scroll finger strong! 💪",
     "Longu appreciates your dedication! 🙏",
-    "You're almost halfway there! 🎯",
+    "You're 10% there! 🎯",
     "This is your moment to shine! ⭐",
     "Longu's proud of your persistence! 🏆",
     "You're doing the impossible! 🚀",
@@ -55,8 +55,28 @@ const Index = () => {
     "Keep that momentum going! 🏃‍♂️",
     "Longu's smile is getting bigger! 😊",
     "You're absolutely unstoppable! 🔥",
-    "The finish line is calling your name! 🏁",
-    "Final stretch! You can do this! 💯"
+    "Wow! You're 25% through Longu! 🌟",
+    "Longu's neck is getting longer! 🦒",
+    "You've passed Longu's chest! 💪",
+    "Halfway to Longu's belly! 🍎",
+    "Longu's wings are stretching! 🕊️",
+    "You're in the middle zone! 🎯",
+    "Longu's belly button says hello! 👋",
+    "Keep going to Longu's waist! ⬇️",
+    "You're 50% there, amazing! 🎉",
+    "Longu's hips don't lie! 💃",
+    "Almost to Longu's knees! 🦵",
+    "Longu's legs are endless! 📏",
+    "You're 75% through! Almost there! 🏁",
+    "Longu's ankles are in sight! 👀",
+    "Final stretch to Longu's feet! 🦶",
+    "You can see Longu's toes! 👣",
+    "SO CLOSE to the finish! 🎯",
+    "Longu's orange feet await! 🧡",
+    "Final push! You've got this! 💪",
+    "The end is near! Keep going! 🏃‍♂️",
+    "Longu's proud of your journey! 🏆",
+    "One more scroll to victory! 🎉"
   ];
 
   const funnyMessages = [
@@ -84,7 +104,47 @@ const Index = () => {
     "Longu's autobiography: 'From Waddle to Vertical Mile'! 📖",
     "Breaking: Penguin discovers secret to immortal scrolling! ♾️",
     "Longu's shopping for extra-long scarves! 🧣",
-    "Alert: Penguin has transcended normal dimensions! 🌌"
+    "Alert: Penguin has transcended normal dimensions! 🌌",
+    "Fun fact: Real penguins can hold their breath for 20 minutes! 🤿",
+    "Longu's favorite food: Fish and pixels! 🐟",
+    "Did you know? Emperor penguins are the tallest penguin species! 👑",
+    "Longu's secret: He practices stretching yoga daily! 🧘‍♂️",
+    "Penguin fact: They huddle together for warmth! 🤗",
+    "Longu's playlist: Only songs with 'long' in the title! 🎵",
+    "Breaking: Longu sets new world record for vertical stretching! 🏆",
+    "Fun fact: Penguins have excellent eyesight underwater! 👁️",
+    "Longu's motto: 'Go long or go home!' 🏡",
+    "Did you know? Penguins can swim up to 22 mph! 🏊‍♂️",
+    "Longu's favorite movie: 'The Long and Winding Road'! 🎬",
+    "Penguin fact: They molt their feathers once a year! 🪶",
+    "Longu's dream job: Professional limousine penguin! 🚗",
+    "Breaking: Local penguin inspires new stretching techniques! 💪",
+    "Fun fact: Penguins slide on their bellies called 'tobogganing'! 🛷",
+    "Longu's superpower: Infinite vertical expansion! ⬆️",
+    "Did you know? Penguins can drink salt water! 🌊",
+    "Longu's hobby: Collecting long scarves! 🧣",
+    "Penguin fact: They recognize each other by unique calls! 📢",
+    "Longu's favorite season: The long winter nights! ❄️",
+    "Breaking: Penguin develops new form of transportation! 🚀",
+    "Fun fact: Adelie penguins build nests with stones! 🪨",
+    "Longu's backup career: Giraffe impersonator! 🦒",
+    "Did you know? Penguins have a third eyelid! 👁️",
+    "Longu's favorite game: Limbo... but in reverse! 🤸‍♂️",
+    "Penguin fact: They can leap 6 feet out of water! 🤾‍♂️",
+    "Longu's life philosophy: 'The longer, the better!' 📏",
+    "Breaking: Penguin discovered to have elastic properties! 🎪",
+    "Fun fact: Chinstrap penguins are excellent climbers! 🧗‍♂️",
+    "Longu's workout routine: Vertical stretching for 3 hours daily! ⏰",
+    "Did you know? Gentoo penguins are the fastest swimmers! 🏊‍♀️",
+    "Longu's dream vacation: A really tall building! 🏢",
+    "Penguin fact: They have counter-shaded coloring for camouflage! 🎭",
+    "Longu's favorite dance: The vertical waddle! 💃",
+    "Breaking: Scientists study penguin's unlimited stretch potential! 🔬",
+    "Fun fact: King penguins don't build nests! 🏠",
+    "Longu's inspiration: Spaghetti and telephone poles! 🍝",
+    "Did you know? Penguins communicate through body language! 🤝",
+    "Longu's goal: To touch the clouds someday! ☁️",
+    "Final fact: You're amazing for scrolling this far! 🌟"
   ];
 
   return (
@@ -120,8 +180,8 @@ const Index = () => {
         <img 
           src={longuImage}
           alt="Longu the penguin stretched really long"
-          className="w-64 md:w-96 object-fill"
-          style={{ height: '2000vh', objectFit: 'fill' }}
+          className="w-64 md:w-96"
+          style={{ height: '4000vh', objectFit: 'fill' }}
         />
       </div>
 
@@ -179,7 +239,7 @@ const Index = () => {
         </div>
 
         {/* Spacer to create the scroll length */}
-        <div style={{ height: '2000vh' }}></div>
+        <div style={{ height: '4000vh' }}></div>
 
         {/* Final celebration section */}
         <section className="py-32 text-center bg-gradient-to-b from-penguin-blue to-penguin-orange">
