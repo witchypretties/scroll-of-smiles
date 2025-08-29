@@ -115,7 +115,7 @@ const Index = () => {
             <div 
               key={`left-encouragement-${index}`} 
               className="absolute left-4 max-w-xs text-lg md:text-xl font-bold text-penguin-dark bg-white/80 p-4 rounded-lg shadow-lg"
-              style={{ top: `${1200 + index * 600}px` }}
+              style={{ top: `${1100 + index * 600}px` }}
             >
               {message}
             </div>
@@ -126,7 +126,7 @@ const Index = () => {
             <div 
               key={`right-encouragement-${index}`} 
               className="absolute right-4 max-w-xs text-lg md:text-xl font-bold text-penguin-dark bg-white/80 p-4 rounded-lg shadow-lg"
-              style={{ top: `${1500 + index * 600}px` }}
+              style={{ top: `${1400 + index * 600}px` }}
             >
               {message}
             </div>
@@ -137,7 +137,7 @@ const Index = () => {
             <div 
               key={`left-funny-${index}`} 
               className="absolute left-8 max-w-sm text-base md:text-lg font-semibold text-penguin-blue bg-penguin-cream/90 p-3 rounded-lg shadow-md"
-              style={{ top: `${1000 + index * 450}px` }}
+              style={{ top: `${900 + index * 450}px` }}
             >
               {message}
             </div>
@@ -148,7 +148,7 @@ const Index = () => {
             <div 
               key={`right-funny-${index}`} 
               className="absolute right-8 max-w-sm text-base md:text-lg font-semibold text-penguin-blue bg-penguin-cream/90 p-3 rounded-lg shadow-md"
-              style={{ top: `${800 + index * 450}px` }}
+              style={{ top: `${700 + index * 450}px` }}
             >
               {message}
             </div>
@@ -156,10 +156,10 @@ const Index = () => {
         </div>
 
         {/* Spacer to create the perfect scroll length matching the image */}
-        <div style={{ height: '15360px' }}></div>
+        <div style={{ height: '12000px' }}></div>
 
         {/* Final celebration section */}
-        <section className="py-32 text-center bg-gradient-to-b from-penguin-blue to-penguin-orange">
+        <section className="py-16 text-center bg-gradient-to-b from-penguin-blue to-penguin-orange">
           <div className="float-animation">
             <h2 className="text-5xl md:text-7xl font-black text-white mb-12">
               🎉 YOU DID IT! 🎉
