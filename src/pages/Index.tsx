@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowDown, Twitter } from 'lucide-react';
 // Using the pre-stretched Longu penguin image
-const longuImage = '/lovable-uploads/90c8bbae-5d67-4cee-9761-c63157bf1d24.png';
+const longuImage = '/longu-stretched.png';
 
 const Index = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
