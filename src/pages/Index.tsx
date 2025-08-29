@@ -187,21 +187,26 @@ const Index = () => {
       </section>
 
       {/* Stretched Longu background - 10 pieces positioned in sequence */}
-      <div className="absolute left-1/2 top-0 transform -translate-x-1/2 pointer-events-none z-0">
-        {longuImages.map((imageSrc, index) => (
-          <img 
-            key={index}
-            src={imageSrc}
-            alt={`Longu the penguin part ${index + 1}`}
-            className="w-64 md:w-96 block"
-            style={{ 
-              height: '400vh', 
-              objectFit: 'fill',
-              position: 'absolute',
-              top: `${index * 400}vh`
-            }}
-          />
-        ))}
+      <div className="fixed left-1/2 top-0 transform -translate-x-1/2 pointer-events-none z-0">
+        {longuImages.map((imageSrc, index) => {
+          console.log(`Loading Longu image ${index + 1}:`, imageSrc);
+          return (
+            <img 
+              key={index}
+              src={imageSrc}
+              alt={`Longu the penguin part ${index + 1}`}
+              className="w-64 md:w-96"
+              style={{ 
+                height: '400vh', 
+                objectFit: 'fill',
+                display: 'block',
+                marginTop: index === 0 ? '0' : '0'
+              }}
+              onLoad={() => console.log(`Longu image ${index + 1} loaded successfully`)}
+              onError={() => console.log(`Longu image ${index + 1} failed to load`)}
+            />
+          );
+        })}
       </div>
 
       {/* Long content sections with side text */}
