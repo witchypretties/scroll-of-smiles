@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowDown, Twitter } from 'lucide-react';
 // Using the pre-stretched Longu penguin image
-const longuImage = '/longu-stretched.png';
+const longuImage = '/lovable-uploads/24c8815c-31db-4478-bd2b-fbf2044649cf.png';
 
 const Index = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -176,18 +176,19 @@ const Index = () => {
       </section>
 
       {/* Stretched Longu background - single pre-stretched image */}
-      <img 
-        src="/lovable-uploads/90c8bbae-5d67-4cee-9761-c63157bf1d24.png"
-        alt="Longu the penguin stretched really long"
-        className="fixed left-1/2 top-0 transform -translate-x-1/2 w-64 md:w-96 pointer-events-none"
-        style={{ 
-          height: '4000vh', 
-          objectFit: 'fill',
-          zIndex: 1
-        }}
-        onLoad={() => console.log('Longu image loaded successfully')}
-        onError={(e) => console.log('Longu image failed to load:', e)}
-      />
+      <div className="absolute left-1/2 top-0 transform -translate-x-1/2 pointer-events-none" style={{ zIndex: 1 }}>
+        <img 
+          src={longuImage}
+          alt="Longu the penguin stretched really long"
+          className="w-64 md:w-96"
+          style={{ 
+            height: '4000vh', 
+            objectFit: 'fill'
+          }}
+          onLoad={() => console.log('NEW Longu image loaded successfully')}
+          onError={() => console.log('NEW Longu image failed to load')}
+        />
+      </div>
 
       {/* Long content sections with side text */}
       <div className="relative z-20">
