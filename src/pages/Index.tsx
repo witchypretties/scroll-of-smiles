@@ -193,45 +193,45 @@ const Index = () => {
       <div className="relative z-20">
         {/* Messages scattered throughout the scroll */}
         <div className="absolute inset-0">
-          {/* Left side encouraging messages - distributed across 15360px height */}
+          {/* Left side encouraging messages - compressed in middle section */}
           {encouragingMessages.slice(0, Math.ceil(encouragingMessages.length / 2)).map((message, index) => (
             <div 
               key={`left-encouragement-${index}`} 
               className="absolute left-4 max-w-xs text-lg md:text-xl font-bold text-penguin-dark bg-white/80 p-4 rounded-lg shadow-lg"
-              style={{ top: `${1500 + index * 350}px` }}
+              style={{ top: `${3000 + index * 250}px` }}
             >
               {message}
             </div>
           ))}
           
-          {/* Right side encouraging messages - distributed across 15360px height */}
+          {/* Right side encouraging messages - compressed in middle section */}
           {encouragingMessages.slice(Math.ceil(encouragingMessages.length / 2)).map((message, index) => (
             <div 
               key={`right-encouragement-${index}`} 
               className="absolute right-4 max-w-xs text-lg md:text-xl font-bold text-penguin-dark bg-white/80 p-4 rounded-lg shadow-lg"
-              style={{ top: `${1800 + index * 350}px` }}
+              style={{ top: `${3200 + index * 250}px` }}
             >
               {message}
             </div>
           ))}
           
-          {/* Left side funny messages - distributed across 15360px height */}
+          {/* Left side funny messages - compressed in middle section */}
           {funnyMessages.slice(0, Math.ceil(funnyMessages.length / 2)).map((message, index) => (
             <div 
               key={`left-funny-${index}`} 
               className="absolute left-8 max-w-sm text-base md:text-lg font-semibold text-penguin-blue bg-penguin-cream/90 p-3 rounded-lg shadow-md"
-              style={{ top: `${1200 + index * 230}px` }}
+              style={{ top: `${2800 + index * 180}px` }}
             >
               {message}
             </div>
           ))}
           
-          {/* Right side funny messages - distributed across 15360px height */}
+          {/* Right side funny messages - compressed in middle section */}
           {funnyMessages.slice(Math.ceil(funnyMessages.length / 2)).map((message, index) => (
             <div 
               key={`right-funny-${index}`} 
               className="absolute right-8 max-w-sm text-base md:text-lg font-semibold text-penguin-blue bg-penguin-cream/90 p-3 rounded-lg shadow-md"
-              style={{ top: `${900 + index * 230}px` }}
+              style={{ top: `${2600 + index * 180}px` }}
             >
               {message}
             </div>
