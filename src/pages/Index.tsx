@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowDown, Twitter } from 'lucide-react';
 // Using the original Longu penguin image
-const longuImage = '/longu.png';
+const longuImage = '/longu-official.png';
 
 const Index = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -189,45 +189,45 @@ const Index = () => {
       <div className="relative z-10">
         {/* Messages scattered throughout the scroll */}
         <div className="absolute inset-0">
-          {/* Left side encouraging messages */}
+          {/* Left side encouraging messages - spread across full height */}
           {encouragingMessages.slice(0, Math.ceil(encouragingMessages.length / 2)).map((message, index) => (
             <div 
               key={`left-encouragement-${index}`} 
               className="absolute left-4 max-w-xs text-lg md:text-xl font-bold text-penguin-dark bg-white/80 p-4 rounded-lg shadow-lg"
-              style={{ top: `${100 + index * 600}px` }}
+              style={{ top: `${1000 + index * 1200}px` }}
             >
               {message}
             </div>
           ))}
           
-          {/* Right side encouraging messages */}
+          {/* Right side encouraging messages - spread across full height */}
           {encouragingMessages.slice(Math.ceil(encouragingMessages.length / 2)).map((message, index) => (
             <div 
               key={`right-encouragement-${index}`} 
               className="absolute right-4 max-w-xs text-lg md:text-xl font-bold text-penguin-dark bg-white/80 p-4 rounded-lg shadow-lg"
-              style={{ top: `${400 + index * 600}px` }}
+              style={{ top: `${1400 + index * 1200}px` }}
             >
               {message}
             </div>
           ))}
           
-          {/* Left side funny messages */}
+          {/* Left side funny messages - spread across full height */}
           {funnyMessages.slice(0, Math.ceil(funnyMessages.length / 2)).map((message, index) => (
             <div 
               key={`left-funny-${index}`} 
               className="absolute left-8 max-w-sm text-base md:text-lg font-semibold text-penguin-blue bg-penguin-cream/90 p-3 rounded-lg shadow-md"
-              style={{ top: `${300 + index * 500}px` }}
+              style={{ top: `${800 + index * 1000}px` }}
             >
               {message}
             </div>
           ))}
           
-          {/* Right side funny messages */}
+          {/* Right side funny messages - spread across full height */}
           {funnyMessages.slice(Math.ceil(funnyMessages.length / 2)).map((message, index) => (
             <div 
               key={`right-funny-${index}`} 
               className="absolute right-8 max-w-sm text-base md:text-lg font-semibold text-penguin-blue bg-penguin-cream/90 p-3 rounded-lg shadow-md"
-              style={{ top: `${200 + index * 500}px` }}
+              style={{ top: `${600 + index * 1000}px` }}
             >
               {message}
             </div>
