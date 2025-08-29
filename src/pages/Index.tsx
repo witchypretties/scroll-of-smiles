@@ -175,14 +175,14 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Stretched Longu background - using the new ultra-stretched 18000px tall image */}
+      {/* Stretched Longu background - perfectly fitted from top to bottom */}
       <div className="absolute left-1/2 top-0 transform -translate-x-1/2 pointer-events-none" style={{ zIndex: 1 }}>
         <img 
           src={longuImage}
           alt="Longu the penguin stretched really long"
           className="w-48 md:w-64"
           style={{ 
-            height: '8000vh', 
+            height: '5000vh', 
             objectFit: 'fill'
           }}
           onLoad={() => console.log('Ultra-stretched Longu image loaded successfully')}
@@ -239,8 +239,8 @@ const Index = () => {
           ))}
         </div>
 
-        {/* Spacer to create the ultra-long scroll length for the 18000px image */}
-        <div style={{ height: '8000vh' }}></div>
+        {/* Spacer to create the perfect scroll length matching the image */}
+        <div style={{ height: '5000vh' }}></div>
 
         {/* Final celebration section */}
         <section className="py-32 text-center bg-gradient-to-b from-penguin-blue to-penguin-orange">
