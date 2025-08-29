@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowDown, Twitter } from 'lucide-react';
-// Using the new ultra-stretched Longu penguin image (9000x18000px)
-const longuImage = '/lovable-uploads/8aa70f37-3a62-4147-b33e-dfecb0b4432d.png';
+// Using the new ultra-stretched Longu penguin image
+const longuImage = '/lovable-uploads/aa5df1c2-4756-4670-9487-93eddc49b41e.png';
 
 const Index = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
