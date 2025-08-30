@@ -101,8 +101,7 @@ const Index = () => {
           style={{ 
             height: '12000px',
             width: '1024px',
-            objectFit: 'cover',
-            objectPosition: '0% 80%'
+            objectFit: 'contain'
           }}
         />
       </div>
